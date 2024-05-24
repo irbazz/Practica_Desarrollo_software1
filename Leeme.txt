@@ -1,0 +1,3 @@
+Para observar los cambios ajax localmente, asegurarse de usar un servidor web local. Se puede usar la extensión Live Server de Visual Studio Code o ejecutar un servidor HTTP simple:
+npm install -g live-server
+live-server

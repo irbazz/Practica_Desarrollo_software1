@@ -1,0 +1,224 @@
+/* el cuerpo ocupe al menos el 100% del alto de la ventana */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+/* cambios en el header para scrollear sin sobreposicion inicial */
+header {
+    background-color: #666666;
+    color: white;
+    padding: 1em 0;
+    width: 100%;
+    position: fixed; /* fija el header en la parte superior */
+    top: 0; /* ancla el header en la parte superior */
+    z-index: 999; /* para que el header este encima de otros elementos */
+    height: 60px; /* altura de header */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* responsivo */
+}
+
+/* muestra las pestañas */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+
+/* bordes redondeados y responsivo */
+nav ul li {
+    margin-right: 10px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: block; /* ocupen todo el espacio del redondeo */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #99cc33;
+    color: #336666;
+}
+
+/* responsivo para distintos tipos de tamaño */
+@media only screen and (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+}
+
+/* Coloca el footer al final del contenedor principal */
+footer {
+    background-color: #669933;
+    color: white;
+    text-align: center;
+    padding: 0.001em 0;
+    width: 100%;
+    margin-top: auto; 
+    font-size: 0.9em; /* reduce el tamaño de la fuente */
+    line-height: 1; /* ajuste de alto */
+    height: 7em; /* altura de footer */
+}
+
+
+/* tarjeta Section */
+
+.tarjeta {
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin: 1em 0;
+    background-color: #f9f9f9;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+form label {
+    display: block;
+    margin: 0.5em 0 0.2em;
+}
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+form button {
+    background-color: #336666;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #99cc33;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 5em 0;
+    background-image: url("hero-image.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.hero .btn {
+    background-color: #336666;
+    color: white;
+    padding: 1em 2em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #99cc33;
+}
+
+/* checkbox */
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin: auto 0;
+}
+
+/* caja */
+
+#selection {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+#selection button {
+    background-color: #336666;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+    cursor: pointer;
+}
+
+#selection button:hover {
+    background-color: #99cc33;
+}
+
+/* Ajuste del contenedor areas*/
+#content {
+    border: 1px solid #ccc;
+    padding: 1em;
+    min-height: 200px;
+    background-color: #f9f9f9;
+    margin: 2em auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Centra el texto de mision y vision */
+.mission-vision {
+    text-align: center; 
+    max-width: 800px;
+    margin: 0 auto; 
+}
+
+
+/* Centra formulario de postulacion */
+.form-title {
+    text-align: center;
+}
+
+/* ajuste de caja previsualizacion */
+.previsualizacion-section {
+    width: 600px; 
+    margin: auto; 
+    padding: 1em; 
+}
+
+/* Estilo para centrar la carga de imagen */
+.upload-label {
+    display: block;
+    text-align: center;
+}
+
+.upload-input {
+    display: block;
+    margin: 0 auto;
+}
